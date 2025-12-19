@@ -21,7 +21,7 @@ class Reclamo extends Equatable {
   const Reclamo({
     required this.id,
     required this.usuarioId,
-    required this.empresaId,
+    this.empresaId = 1,  // Single-tenant: siempre empresa ID 1
     this.sucursalId,
     this.sucursalNombre,
     this.clienteId,
@@ -51,7 +51,7 @@ class Reclamo extends Equatable {
     return Reclamo(
       id: json['id'] as int,
       usuarioId: json['usuario_id'] as String,
-      empresaId: json['empresa_id'] as int,
+      empresaId: json['empresa_id'] as int? ?? 1,  // Single-tenant fallback
       sucursalId: json['sucursal_id'] as int?,
       sucursalNombre: json['sucursales'] != null ? json['sucursales']['nombre'] as String? : null,
       clienteId: json['cliente_id'] as int?,

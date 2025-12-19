@@ -9,7 +9,7 @@ class Sucursal extends Equatable {
 
   const Sucursal({
     required this.id,
-    required this.empresaId,
+    this.empresaId = 1,  // Single-tenant: siempre empresa ID 1
     required this.nombre,
     this.direccion,
     required this.fechaCreacion,
@@ -18,7 +18,7 @@ class Sucursal extends Equatable {
   factory Sucursal.fromJson(Map<String, dynamic> json) {
     return Sucursal(
       id: json['id'] as int,
-      empresaId: json['empresa_id'] as int,
+      empresaId: json['empresa_id'] as int? ?? 1,  // Single-tenant fallback
       nombre: json['nombre'] as String,
       direccion: json['direccion'] as String?,
       fechaCreacion: DateTime.parse(json['fecha_creacion'] as String).toLocal(),

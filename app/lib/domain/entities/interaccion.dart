@@ -13,7 +13,7 @@ class Interaccion extends Equatable {
   const Interaccion({
     required this.id,
     required this.usuarioId,
-    required this.empresaId,
+    this.empresaId = 1,  // Single-tenant: siempre empresa ID 1
     this.tipoLegacy,
     this.tipoInteraccionId,
     this.descripcion,
@@ -25,7 +25,7 @@ class Interaccion extends Equatable {
     return Interaccion(
       id: json['id'] as int,
       usuarioId: json['usuario_id'] as String,
-      empresaId: json['empresa_id'] as int,
+      empresaId: json['empresa_id'] as int? ?? 1,  // Single-tenant fallback
       tipoLegacy: json['tipo'] as String?,
       tipoInteraccionId: json['tipo_interaccion_id'] as int?,
       descripcion: json['descripcion'] as String?,

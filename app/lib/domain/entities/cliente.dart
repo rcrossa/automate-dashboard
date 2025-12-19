@@ -20,7 +20,7 @@ class Cliente extends Equatable {
 
   const Cliente({
     required this.id,
-    required this.empresaId,
+    this.empresaId = 1,  // Single-tenant: siempre empresa ID 1
     this.sucursalId,
     required this.nombre,
     this.apellido,
@@ -40,7 +40,7 @@ class Cliente extends Equatable {
   factory Cliente.fromJson(Map<String, dynamic> json) {
     return Cliente(
       id: json['id'] as int,
-      empresaId: json['empresa_id'] as int,
+      empresaId: json['empresa_id'] as int? ?? 1,  // Single-tenant fallback
       sucursalId: json['sucursal_id'] as int?,
       nombre: json['nombre'] as String,
       apellido: json['apellido'] as String?,

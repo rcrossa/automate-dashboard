@@ -29,6 +29,10 @@ class UsuarioConPermisos extends Equatable {
     final rol = rolNombre ?? json['tipo_perfil'] ?? '';
     final tipoPerfil = json['tipo_perfil'] as String?;
     
+    // Single-tenant: empresa_id siempre es 1
+    // La base de datos ya lo asigna automáticamente en el trigger
+    final empresaId = json['empresa_id'] as int? ?? 1;
+    
     return UsuarioConPermisos(
       id: json['id']?.toString() ?? '',
       email: json['email'] ?? '',
@@ -36,7 +40,7 @@ class UsuarioConPermisos extends Equatable {
       username: json['username'],
       rol: rol,
       tipoPerfil: tipoPerfil,
-      empresaId: json['empresa_id'],
+      empresaId: empresaId,
       sucursalId: json['sucursal_id'],
       capacidades: [],
     );
