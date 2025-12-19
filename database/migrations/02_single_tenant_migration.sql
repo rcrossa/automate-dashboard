@@ -99,22 +99,32 @@ BEGIN
 END $$;
 
 -- =============================================
--- PARTE 3: ELIMINAR SISTEMA DE MÓDULOS
+-- PARTE 3: SIMPLIFICAR SISTEMA DE MÓDULOS
 -- =============================================
 
--- Desactivar RLS temporalmente para eliminar
+-- MANTENER: modulos, sucursal_modulos (activación por sucursal para pruebas piloto)
+-- ELIMINAR: empresa_modulos (multi-tenant), usuario_modulos (granularidad innecesaria)
+
+-- Desactivar RLS temporalmente
 ALTER TABLE IF EXISTS usuario_modulos DISABLE ROW LEVEL SECURITY;
-ALTER TABLE IF EXISTS sucursal_modulos DISABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS empresa_modulos DISABLE ROW LEVEL SECURITY;
-ALTER TABLE IF EXISTS modulos DISABLE ROW LEVEL SECURITY;
 
--- Eliminar tablas de módulos
+-- Eliminar solo tablas de módulos multi-tenant
 DROP TABLE IF EXISTS usuario_modulos CASCADE;
-DROP TABLE IF EXISTS sucursal_modulos CASCADE;
 DROP TABLE IF EXISTS empresa_modulos CASCADE;
-DROP TABLE IF EXISTS modulos CASCADE;
 
-RAISE NOTICE 'Sistema de módulos eliminado';
+-- Actualizar sucursal_modulos: asegurar que todas pertenecen a la empresa única
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = 'sucursal_modulos') THEN
+    -- Actualizar empresa_id en sucursales relacionadas
+    UPDATE sucursales 
+    SET empresa_id = (SELECT id FROM empresas ORDER BY id LIMIT 1)
+    WHERE id IN (SELECT DISTINCT sucursal_id FROM sucursal_modulos);
+  END IF;
+END $$;
+
+RAISE NOTICE 'Sistema de módulos simplificado: Mantenido modulos y sucursal_modulos';
 
 -- =============================================
 -- PARTE 4: ELIMINAR SISTEMA DE INVITACIONES

@@ -260,6 +260,56 @@ DROP POLICY IF EXISTS "select_permisos_simple" ON permisos;
 CREATE POLICY "select_permisos_simple" ON permisos FOR SELECT TO authenticated USING (true);
 
 -- =============================================
+-- MÓDULOS Y SUCURSAL_MODULOS
+-- =============================================
+
+-- MODULOS: Catálogo visible para todos
+DROP POLICY IF EXISTS "select_modulos_unificada" ON modulos;
+DROP POLICY IF EXISTS "select_modulos_simple" ON modulos;
+CREATE POLICY "select_modulos_simple" ON modulos
+FOR SELECT TO authenticated USING (true);
+
+DROP POLICY IF EXISTS "insert_modulos_unificada" ON modulos;
+DROP POLICY IF EXISTS "insert_modulos_simple" ON modulos;
+CREATE POLICY "insert_modulos_simple" ON modulos
+FOR INSERT TO authenticated WITH CHECK ((SELECT public.es_admin()));
+
+DROP POLICY IF EXISTS "update_modulos_unificada" ON modulos;
+DROP POLICY IF EXISTS "update_modulos_simple" ON modulos;
+CREATE POLICY "update_modulos_simple" ON modulos
+FOR UPDATE TO authenticated 
+USING ((SELECT public.es_admin()))
+WITH CHECK ((SELECT public.es_admin()));
+
+DROP POLICY IF EXISTS "delete_modulos_unificada" ON modulos;
+DROP POLICY IF EXISTS "delete_modulos_simple" ON modulos;
+CREATE POLICY "delete_modulos_simple" ON modulos
+FOR DELETE TO authenticated USING ((SELECT public.es_admin()));
+
+-- SUCURSAL_MODULOS: Activación de módulos por sucursal
+DROP POLICY IF EXISTS "select_sucursal_modulos_unificada" ON sucursal_modulos;
+DROP POLICY IF EXISTS "select_sucursal_modulos_simple" ON sucursal_modulos;
+CREATE POLICY "select_sucursal_modulos_simple" ON sucursal_modulos
+FOR SELECT TO authenticated USING (true);
+
+DROP POLICY IF EXISTS "insert_sucursal_modulos_unificada" ON sucursal_modulos;
+DROP POLICY IF EXISTS "insert_sucursal_modulos_simple" ON sucursal_modulos;
+CREATE POLICY "insert_sucursal_modulos_simple" ON sucursal_modulos
+FOR INSERT TO authenticated WITH CHECK ((SELECT public.es_admin()));
+
+DROP POLICY IF EXISTS "update_sucursal_modulos_unificada" ON sucursal_modulos;
+DROP POLICY IF EXISTS "update_sucursal_modulos_simple" ON sucursal_modulos;
+CREATE POLICY "update_sucursal_modulos_simple" ON sucursal_modulos
+FOR UPDATE TO authenticated 
+USING ((SELECT public.es_admin()))
+WITH CHECK ((SELECT public.es_admin()));
+
+DROP POLICY IF EXISTS "delete_sucursal_modulos_unificada" ON sucursal_modulos;
+DROP POLICY IF EXISTS "delete_sucursal_modulos_simple" ON sucursal_modulos;
+CREATE POLICY "delete_sucursal_modulos_simple" ON sucursal_modulos
+FOR DELETE TO authenticated USING ((SELECT public.es_admin()));
+
+-- =============================================
 -- FIN
 -- =============================================
 
@@ -270,6 +320,7 @@ RAISE NOTICE 'RLS POLICIES SIMPLIFICADAS EXITOSAMENTE';
 RAISE NOTICE '================================================';
 RAISE NOTICE 'Todas las policies ahora permiten acceso a todos los usuarios autenticados';
 RAISE NOTICE 'Las restricciones de empresa_id han sido eliminadas';
+RAISE NOTICE 'MANTENIDO: Sistema de módulos por sucursal';
 RAISE NOTICE '================================================';
-RAISE NOTICE 'Siguiente paso: Actualizar Backend Python';
+RAISE NOTICE 'Siguiente paso: Refactorizar Flutter App';
 RAISE NOTICE '================================================';
