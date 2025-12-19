@@ -13,7 +13,7 @@ BEGIN
         WHERE table_name = 'clientes' 
         AND column_name = 'cuit'
     ) THEN
-        -- Agregar columna cuit
+        -- Agregar columna cuit como texto (flexible para formato)
         ALTER TABLE clientes 
         ADD COLUMN cuit text;
         

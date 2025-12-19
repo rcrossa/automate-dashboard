@@ -347,7 +347,7 @@ CREATE TABLE clientes (
     nombre text,
     apellido text,
     razon_social text,
-    cuit text,  -- CUIT/CUIL para Argentina (agregado)
+    cuit text,  -- CUIT/CUIL (puede incluir guiones: 20-12345678-9)
     documento_identidad text,
     email text,
     telefono text,
