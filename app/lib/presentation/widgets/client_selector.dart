@@ -46,12 +46,9 @@ class _ClientSelectorState extends ConsumerState<ClientSelector> {
                return const Iterable<Cliente>.empty();
              }
              
-             final session = ref.read(userStateProvider).asData?.value;
-             // If no session or no company, return empty
-             if (session?.empresa == null) return const Iterable<Cliente>.empty();
-             
+             // Single-tenant: No need to check for empresa, RLS handles it
              final repo = ref.read(clienteRepositoryProvider);
-             return repo.searchClientes(session!.empresa!.id, textEditingValue.text);
+             return repo.searchClientes(textEditingValue.text);  // RLS filters by empresa_id=1
           },
           onSelected: (Cliente selection) {
              widget.onSelected(selection);
