@@ -5,7 +5,7 @@ import 'package:msasb_app/presentation/providers/user_provider.dart';
 import 'package:msasb_app/widgets/module_guard.dart';
 import '../company/company_dashboard_screen.dart';
 import '../branch/branch_dashboard_screen.dart';
-import '../super_admin/super_admin_dashboard_screen.dart';
+// Single-tenant: No super_admin dashboard needed
 import 'widgets/user_error_view.dart';
 import 'widgets/user_profile_screen.dart';
 import 'widgets/dashboard_fallbacks.dart';
@@ -38,11 +38,7 @@ class _PantallaPrincipalState extends ConsumerState<PantallaPrincipal> {
   }
 
   Widget _buildDashboardContent(UserSession session) {
-    // 0. Si es Super Admin, mostrar Dashboard de Super Admin
-    if (session.isSuperAdmin || session.currentRole == 'super_admin') {
-      return const SuperAdminDashboardScreen();
-    }
-
+    // Single-tenant: No super_admin, only admin for company management
     // 1. Si es Admin, mostrar Dashboard de Empresa (Maneja su propio Scaffold/Layout)
     if (session.currentRole == 'admin') {
       return ModuleGuard(
