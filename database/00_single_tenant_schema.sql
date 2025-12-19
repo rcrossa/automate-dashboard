@@ -347,6 +347,7 @@ CREATE TABLE clientes (
     nombre text,
     apellido text,
     razon_social text,
+    cuit text,  -- CUIT/CUIL para Argentina (agregado)
     documento_identidad text,
     email text,
     telefono text,
