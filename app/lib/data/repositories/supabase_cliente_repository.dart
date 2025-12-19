@@ -9,12 +9,12 @@ class SupabaseClienteRepository implements ClienteRepository {
   SupabaseClienteRepository(this._client);
 
   @override
-  Future<List<Cliente>> getClientes(int empresaId) async {
+  Future<List<Cliente>> getClientes() async {  // Single-tenant: no empresaId needed
     try {
       final data = await _client
           .from('clientes')
           .select()
-          .eq('empresa_id', empresaId)
+          // RLS policies handle empresa_id filtering
           .order('nombre');
       return (data as List).map((e) => Cliente.fromJson(e)).toList();
     } catch (e) {
@@ -23,12 +23,12 @@ class SupabaseClienteRepository implements ClienteRepository {
   }
 
   @override
-  Future<List<Cliente>> searchClientes(int empresaId, String query) async {
+  Future<List<Cliente>> searchClientes(String query) async {  // Single-tenant: no empresaId needed
     try {
       final data = await _client
           .from('clientes')
           .select()
-          .eq('empresa_id', empresaId)
+          // RLS policies handle empresa_id filtering
           .or('nombre.ilike.%$query%,apellido.ilike.%$query%,documento_identidad.ilike.%$query%')
           .limit(20);
       return (data as List).map((e) => Cliente.fromJson(e)).toList();

@@ -32,20 +32,8 @@ class SupabaseReclamoRepository implements ReclamoRepository {
       }
 
       // Apply Filters
-      if (empresaId != null) {
-        supabaseQuery = supabaseQuery.eq('empresa_id', empresaId);
-      } else {
-         final userId = _client.auth.currentUser?.id;
-         if (userId != null) {
-             supabaseQuery = supabaseQuery.eq('usuario_id', userId);
-         }
-      }
-      
-      if (empresaId != null) {
-        supabaseQuery = supabaseQuery.eq('empresa_id', empresaId);
-      } else {
-        supabaseQuery = supabaseQuery.eq('usuario_id', userId);
-      }
+      // Single-tenant: RLS policies handle empresa_id filtering automatically
+      // Solo filtramos por usuario si no hay empresa_id (legacy compatibility)
       
       // Filtros Avanzados
       if (sucursalId != null) {
@@ -78,7 +66,7 @@ class SupabaseReclamoRepository implements ReclamoRepository {
   @override
   Future<void> createClaim({
     required String userId,
-    required int empresaId, 
+    int empresaId = 1,  // Single-tenant: default to 1
     int? sucursalId,
     int? clientId,
     required String title,

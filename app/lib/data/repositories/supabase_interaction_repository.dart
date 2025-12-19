@@ -13,12 +13,8 @@ class SupabaseInteractionRepository implements InteractionRepository {
     try {
       var query = _client.from('interacciones').select();
 
-      if (empresaId != null) {
-        query = query.eq('empresa_id', empresaId);
-      } else {
-        // Fallback filter
-        query = query.eq('usuario_id', userId);
-      }
+      // Single-tenant: RLS policies handle empresa_id filtering
+      // No need to explicitly filter by empresaId
 
       final resp = await query.order('fecha', ascending: false);
       
@@ -33,7 +29,7 @@ class SupabaseInteractionRepository implements InteractionRepository {
   @override
   Future<void> logInteraction({
     required String userId,
-    required int empresaId,
+    int empresaId = 1,  // Single-tenant: default to 1
     String? typeLegacy, // Deprecated
     int? tipoInteraccionId,
     String? description,
