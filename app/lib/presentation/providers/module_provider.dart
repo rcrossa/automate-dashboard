@@ -55,7 +55,7 @@ class ActiveModules extends _$ActiveModules {
 
     final repo = ref.read(moduleRepositoryProvider);
     // Consultar módulos activos para la sucursal actual
-    final result = await repo.getActiveModulesForBranch(
+    final result = await repo.getBranchModules(
       branchId: session.sucursal!.id,
     );
     return result;
