@@ -6,22 +6,21 @@ import 'user_provider.dart';
 
 part 'module_provider.g.dart';
 
-// Stream que escucha cambios en tiempo real y emite un valor único para forzar reconstrucción
+// Stream que escucha cambios en tiempo real de módulos por SUCURSAL
 final moduleUpdateStreamProvider = StreamProvider<DateTime>((ref) {
   final userState = ref.watch(userStateProvider);
   final session = userState.asData?.value;
 
-  if (session == null || session.empresa == null) {
+  if (session == null || session.sucursal == null) {
     return const Stream.empty();
   }
 
-  // Escuchamos cambios en la tabla 'empresa_modulos' filtrando por nuestra empresa
+  // Single-tenant: Escuchamos cambios en 'sucursal_modulos' 
   return Supabase.instance.client
-      .from('empresa_modulos')
+      .from('sucursal_modulos')
       .stream(primaryKey: ['id'])
-      .eq('empresa_id', session.empresa!.id)
+      .eq('sucursal_id', session.sucursal!.id)
       .map((data) {
-        // Retornamos fecha actual para asegurar que Riverpod detecte un cambio de estado
         return DateTime.now(); 
       });
 });
@@ -30,10 +29,10 @@ final moduleUpdateStreamProvider = StreamProvider<DateTime>((ref) {
 class ActiveModules extends _$ActiveModules {
   @override
   FutureOr<List<String>> build() async {
-    // Suscribirse a cambios en tiempo real para invalidar el cache
+    // Suscribirse a cambios en tiempo real
     ref.watch(moduleUpdateStreamProvider);
 
-    // Escuchar cambios en la sesión (empresa/sucursal)
+    // Escuchar cambios en la sesión
     final userState = ref.watch(userStateProvider);
     final session = userState.asData?.value;
 
@@ -41,22 +40,23 @@ class ActiveModules extends _$ActiveModules {
       return [];
     }
 
-    // CRITICAL: Super admin has full access to ALL modules, empresa can be null
-    if (session.isSuperAdmin || session.currentRole == 'super_admin') {
-      // Return all available modules for super admin
-      return ['dashboard', 'reclamos', 'clientes', 'inventario', 'crm_interacciones'];
+    // Single-tenant: No hay super_admin multi-empresa
+    // Admin tiene acceso a todos los módulos configurables
+    if (session.isAdmin || session.currentRole == 'admin') {
+      // Return all available modules for admin
+      return ['dashboard', 'reclamos', 'clientes', 'personal', 'sucursales', 'crm_interacciones', 'reportes'];
     }
 
-    // Regular users require empresa
-    if (session.empresa == null) {
-      return [];
+    // Usuarios regulares: verificar módulos activos por sucursal
+    if (session.sucursal == null) {
+      // Sin sucursal asignada, acceso limitado
+      return ['dashboard'];
     }
 
     final repo = ref.read(moduleRepositoryProvider);
-    // Consultar módulos activos para la empresa/sucursal actual
-    final result = await repo.getActiveModules(
-      companyId: session.empresa!.id,
-      branchId: session.sucursal?.id,
+    // Consultar módulos activos para la sucursal actual
+    final result = await repo.getActiveModulesForBranch(
+      branchId: session.sucursal!.id,
     );
     return result;
   }

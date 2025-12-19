@@ -26,29 +26,30 @@ class UserState extends _$UserState {
       return const UserSession();
     }
 
-    // 2. Cargar preferencias guardadas o usar las del usuario
+    // 2. Single-tenant: empresa_id siempre es 1
+    const empresaId = 1;
+    
+    // 3. Cargar preferencias guardadas para sucursal
     final prefs = await SharedPreferences.getInstance();
-    final empresaId = prefs.getInt('empresa_id') ?? usuario.empresaId;
     final sucursalId = prefs.getInt('sucursal_id') ?? usuario.sucursalId;
 
     Empresa? empresa;
     Sucursal? sucursal;
 
-    // 3. Cargar Empresa si existe
-    if (empresaId != null) {
-      try {
-        final resp = await Supabase.instance.client
-            .from('empresas')
-            .select()
-            .eq('id', empresaId)
-            .single();
-        empresa = Empresa.fromJson(resp);
-      } catch (e) {
-        await prefs.remove('empresa_id');
-      }
+    // 4. Cargar Empresa única (siempre ID=1)
+    try {
+      final resp = await Supabase.instance.client
+          .from('empresas')
+          .select()
+          .eq('id', empresaId)
+          .single();
+      empresa = Empresa.fromJson(resp);
+    } catch (e) {
+      // Si falla, la empresa no existe en BD
+      debugPrint('Error loading empresa: $e');
     }
 
-    // 4. Cargar Sucursal si existe
+    // 5. Cargar Sucursal si existe
     if (sucursalId != null) {
       try {
         final resp = await Supabase.instance.client
@@ -70,24 +71,7 @@ class UserState extends _$UserState {
     );
   }
 
-  Future<void> setCompany(Empresa empresa) async {
-    state = const AsyncValue.loading();
-    state = await AsyncValue.guard(() async {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setInt('empresa_id', empresa.id);
-      
-      // Al cambiar empresa, limpiamos la sucursal actual si no pertenece a la nueva empresa
-      // Por simplicidad, limpiamos siempre la sucursal al cambiar de empresa
-      await prefs.remove('sucursal_id');
-
-      final currentSession = state.value ?? const UserSession();
-      return currentSession.copyWith(
-        empresa: empresa,
-        themeColor: empresa.colorTema != null ? _parseColor(empresa.colorTema!) : null,
-        clearSucursal: true,
-      );
-    });
-  }
+  // Single-tenant: No need for setCompany, empresa is always ID=1
 
   Future<void> setBranch(Sucursal? sucursal) async {
     state = const AsyncValue.loading();
@@ -114,7 +98,7 @@ class UserState extends _$UserState {
 
   Future<void> clear() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.remove('empresa_id');
+    // Single-tenant: empresa_id is always 1, only clear sucursal
     await prefs.remove('sucursal_id');
     state = const AsyncValue.data(UserSession());
   }
