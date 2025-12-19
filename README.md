@@ -22,6 +22,24 @@ automate-dashboard/
 
 ## 🎯 Características
 
+### 💡 Modelo de Negocio Único
+**Single-Tenant + Módulos por Sucursal**
+
+- ✅ **Una empresa** (simplificado, sin multi-tenancy)
+- ✅ **Múltiples sucursales** con activación selectiva de módulos
+- ✅ **Upsell flexible**: Casa Matriz con acceso completo, sucursales pequeñas solo lo básico
+- ✅ **Pruebas piloto**: Activar módulo en 1 sucursal, validar, expandir
+
+**Ejemplo de uso:**
+- Casa Matriz: Acceso a todos los módulos
+- Sucursal Norte: Solo Clientes + Reclamos
+- Sucursal Sur: Clientes + Reclamos + Speech-to-Text
+
+**Monetización:**
+- Licencia base: $500-1500 USD
+- Módulos adicionales por sucursal: $50-100/mes
+- Prueba piloto gratuita para validar valor
+
 ### Módulos Incluidos
 - ✅ **Dashboard Principal** - Visualización de métricas clave
 - ✅ **Gestión de Clientes (CRM)** - Base de clientes completa
