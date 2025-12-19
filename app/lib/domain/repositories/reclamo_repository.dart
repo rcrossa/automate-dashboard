@@ -17,7 +17,7 @@ abstract class ReclamoRepository {
   
   Future<void> createClaim({
     required String userId,
-    required int empresaId,
+    int empresaId = 1,  // Single-tenant: default to 1
     int? sucursalId,
     int? clientId,
     required String title,
