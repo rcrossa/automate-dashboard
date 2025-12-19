@@ -42,7 +42,7 @@ class ActiveModules extends _$ActiveModules {
 
     // Single-tenant: No hay super_admin multi-empresa
     // Admin tiene acceso a todos los módulos configurables
-    if (session.isAdmin || session.currentRole == 'admin') {
+    if (session.currentRole == 'admin') {
       // Return all available modules for admin
       return ['dashboard', 'reclamos', 'clientes', 'personal', 'sucursales', 'crm_interacciones', 'reportes'];
     }
