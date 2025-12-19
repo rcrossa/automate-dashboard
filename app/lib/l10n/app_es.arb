@@ -1,0 +1,462 @@
+{
+  "appTitle": "Mi Primera App",
+  "loginTitle": "Iniciar Sesión",
+  "emailLabel": "Correo Electrónico",
+  "passwordLabel": "Contraseña",
+  "loginButton": "Ingresar",
+  "registerButton": "Registrarse",
+  "registerTitle": "Registro",
+  "nameLabel": "Nombre",
+  "welcomeMessage": "Bienvenido",
+  "forgotPassword": "¿Olvidaste tu contraseña?",
+  "errorMessage": "Error: {error}",
+
+  "logout": "Cerrar Sesión",
+  "close": "Cerrar",
+  "cancel": "Cancelar",
+
+  "roleDetected": "Rol detectado: {role}",
+  "none": "Ninguno",
+  "debugMode": "Modo Debug",
+  "debugAdminMessage": "Para ver el Dashboard de Admin, tu usuario debe tener el rol \"admin\" en la base de datos.\n\n¿Quieres simular ser Admin ahora?",
+  "simulateNotImplemented": "Simular (No implementado)",
+  "assignRoleMessage": "Por favor, asigna el rol \"admin\" en Supabase o usa un usuario admin.",
+  "whySeeThis": "¿Por qué veo esto?",
+  "emailLabelWithVal": "Email: {email}",
+  "permissions": "Permisos:",
+  "companyLabelWithVal": "Empresa: {company}",
+  "branchLabelWithVal": "Sucursal: {branch}",
+  "noCompanyAssigned": "No tienes empresa asignada.",
+
+  "dashboardInactive": "Dashboard Inactivo",
+  "dashboardDisabledMessage": "El módulo Dashboard está desactivado.",
+  "adminActivateMessage": "Como administrador, puedes activarlo en el Marketplace.",
+  "goToMarketplace": "Ir al Marketplace",
+  "accessDenied": "Acceso Denegado",
+  "dashboardNotActive": "Dashboard no activo",
+  "contactAdminMessage": "Contacte a su administrador para activar este módulo.",
+
+  "userNotFoundDB": "No se encontró el usuario en la base de datos.",
+  "authenticatedUserId": "ID de usuario autenticado",
+  "viewUserId": "Ver ID de usuario",
+
+  "companyPanel": "Panel de Empresa",
+  "modulesMarketplace": "Marketplace de Módulos",
+  "summary": "Resumen",
+  "branches": "Sucursales",
+  "personnel": "Personal",
+
+  "searchBranch": "Buscar Sucursal",
+  "noBranchesFound": "No se encontraron sucursales",
+  "noAddress": "Sin dirección",
+  "editBranch": "Editar Sucursal",
+  "newBranch": "Nueva Sucursal",
+  "branchUpdated": "Sucursal actualizada",
+  "branchCreated": "Sucursal creada",
+  "addressLabel": "Dirección",
+  "save": "Guardar",
+  "create": "Crear",
+
+  "clientUpdated": "Cliente actualizado",
+  "clientCreated": "Cliente creado",
+  "deleteClient": "Eliminar Cliente",
+  "deleteConfirmation": "¿Estás seguro de que deseas eliminar este cliente?",
+  "clientCannotUndo": "Esta acción no se puede deshacer.",
+  "clientDeleted": "Cliente eliminado",
+
+  "audioTestTitle": "Test de Grabación de Audio",
+  "audioTestSubtitle": "Prueba funcionalidad de grabación y transcripción",
+  "toolsSection": "Herramientas de Testing",
+  "audioTestCard": "Test de Audio",
+  "audioTestDescription": "Prueba grabación y transcripción de voz a texto",
+  "branchInfoSection": "Información",
+  "currentBranch": "Sucursal Actual",
+  "branchName": "Nombre",
+  "branchAddress": "Dirección",
+  "limitedAccessStaff": "Acceso limitado: vista de staff",
+  
+  "recordingInstructions": "Toca el micrófono para comenzar a grabar",
+  "tapToRecord": "Toca para grabar",
+  "recording": "GRABANDO",
+  "paused": "PAUSADO",
+  "maxDuration": "Máximo: {duration}",
+  "@maxDuration": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "recordingControls": "Controles",
+  "cancelRecording": "Cancelar",
+  "pauseRecording": "Pausar",
+  "resumeRecording": "Resumir",
+  "stopRecording": "Finalizar",
+  "permissionRequired": "Permiso Requerido",
+  "microphonePermissionMessage": "Se necesita acceso al micrófono para grabar audio. Por favor, habilita el permiso en la configuración de la app.",
+  "errorStartingRecording": "Error al iniciar grabación: {error}",
+  "@errorStartingRecording": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "recordedAudio": "Audio Grabado",
+  "fileName": "Archivo",
+  "fileSize": "Tamaño",
+  "noRecordingsYet": "Sin grabaciones aún",
+  "transcribeAudio": "Transcribir Audio",
+  "transcribing": "Transcribiendo...",
+  "transcription": "Transcripción",
+  "copyToClipboard": "Copiar",
+  "copiedToClipboard": "Copiado al portapapeles",
+  "transcriptionCompleted": "Transcripción completada ✅",
+  "textCopied": "Texto copiado al portapapeles",
+  "recordingTest": "Test de Grabación",
+  "transcriptionError": "Error en transcripción",
+  "backendConnectionError": "No se puede conectar al servidor. Verifica que el backend esté ejecutándose.",
+  "transcriptionFailed": "Error al transcribir: {error}",
+  "@transcriptionFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+
+  "searchPersonnel": "Buscar Personal",
+  "noEmployeesFound": "No se encontraron empleados",
+  "noName": "Sin nombre",
+  "roleBranchLabel": "Rol: {role} - Sucursal: {branch}",
+  "matrix": "Matriz",
+  "editPersonnel": "Editar Personal",
+  "invitePersonnel": "Invitar Personal",
+  "lastNameLabel": "Apellido",
+  "docIdLabel": "Documento Identidad",
+  "phoneLabel": "Teléfono",
+  "roleLabel": "Rol",
+  "adminRole": "Administrador",
+  "managerRole": "Gerente",
+  "userRole": "Usuario / Staff",
+  "branchOptionalLabel": "Sucursal (Opcional)",
+  "noBranchMatrixLabel": "Sin Sucursal (Casa Matriz)",
+  "invite": "Invitar",
+  "userUpdated": "Usuario actualizado",
+  "invitationSent": "Invitación enviada",
+
+  "generalSummary": "Resumen General",
+  "incomeMonth": "Ingresos (Mes)",
+  "claims": "Reclamos",
+  "incomeByBranch": "Ingresos por Sucursal",
+  "branchPanel": "Panel de Sucursal",
+  "branchLabel": "Sucursal: {name}",
+  "branchManagementPanel": "Panel de Gestión de Sucursal",
+  "viewClaims": "Ver Reclamos",
+  "viewInteractions": "Ver Interacciones",
+
+  "staffPortalTitle": "{name} - Portal Staff",
+  "welcomeStaffPortal": "Bienvenido al Portal de Staff",
+  "staffPortalSubtitle": "Gestiona tus tareas y fichajes desde aquí.",
+  "clockIn": "Fichar",
+  "myTasks": "Mis Tareas",
+  "requests": "Solicitudes",
+  "myProfile": "Mi Perfil",
+  "backofficeTitle": "Backoffice",
+  "recentActivity": "Actividad Reciente",
+  "searchUserPlaceholder": "Nombre o email",
+  "userCount": "{count} usuarios",
+  "paginationInfo": "Página {current} de {total}",
+  "noResults": "Sin resultados",
+
+  "clientFileTitle": "Ficha de Cliente",
+  "interactionHistory": "Historial de Interacciones",
+  "reload": "Recargar",
+  "noInteractions": "No hay interacciones registradas",
+  "addNote": "Agregar Nota",
+  "notePlaceholder": "Escribe una nota sobre el cliente...",
+  "close": "Cerrar",
+  "errorLoadingInteractions": "Error al cargar interacciones: {error}",
+  "errorSavingNote": "Error al guardar nota: {error}",
+
+  "claimsTitle": "Reclamos: {name}",
+  "noClaims": "No hay reclamos registrados",
+  "newClaim": "Nuevo Reclamo",
+  "titleLabel": "Título",
+  "descriptionLabel": "Descripción",
+  "priorityLabel": "Prioridad",
+  "priorityLow": "Baja",
+  "priorityMedium": "Media",
+  "priorityHigh": "Alta",
+  "errorLoadingClaims": "Error al cargar reclamos: {error}",
+  "errorCreatingClaim": "Error al crear reclamo: {error}",
+  "errorUpdatingClient": "Error al actualizar cliente",
+  "branchManagementTitle": "Gestión de Sucursales",
+  "personnelManagementTitle": "Gestión de Personal",
+  "errorNoCompanyContext": "Error: No se encontró empresa en el contexto",
+  "noBranchesRegistered": "No hay sucursales registradas",
+  "noEmployeesRegistered": "No hay empleados registrados",
+  "clientFormTitleNew": "Nuevo Cliente",
+  "clientFormTitleEdit": "Editar Cliente",
+  "labelBranch": "Sucursal",
+  "labelHeadquarters": "Casa Matriz / Global",
+  "typePerson": "Persona",
+  "typeCompany": "Empresa",
+  "labelBusinessName": "Razón Social *",
+  "labelTaxId": "CUIT *",
+  "labelContactName": "Nombre Contacto *",
+  "labelContactLastName": "Apellido Contacto",
+  "labelName": "Nombre *",
+  "labelLastName": "Apellido",
+  "labelIdDocument": "DNI / Documento",
+  "labelEmail": "Email",
+  "labelPhone": "Teléfono",
+  "labelAddress": "Dirección",
+  "labelNotes": "Notas",
+  "btnCancel": "Cancelar",
+  "btnSave": "Guardar",
+  "validationRequired": "Requerido",
+  "marketplaceTitle": "Marketplace de Módulos",
+  "errorUpdatingStatus": "Error al actualizar estado: {error}",
+
+  "viewFile": "Ver Ficha",
+  "permissionsLabel": "Permisos:",
+  
+  "statusPending": "Pendiente",
+  "statusInProgress": "En Proceso",
+  "statusResolved": "Resuelto",
+  "statusClosed": "Cerrado",
+  "priorityDisplay": "Prioridad: {priority}",
+
+  "serverError": "Error en el servidor. Por favor, intente más tarde.",
+  "authError": "Error de autenticación.",
+  "networkError": "Error de conexión. Verifique su internet.",
+  "validationError": "Error de validación. Verifique los datos.",
+  "unknownError": "Ha ocurrido un error inesperado.",
+  
+  "superAdminDashboardTitle": "Panel de Super Admin",
+  "companiesSection": "Empresas",
+  "pendingInvitationsSection": "Invitaciones Pendientes",
+  "noPendingInvitations": "No hay invitaciones pendientes",
+  "errorLoadingCompanies": "Error cargando empresas: {error}",
+  "codeLabel": "Código",
+  "createdLabel": "Creada",
+  "manageModulesTooltip": "Gestionar Módulos",
+  "manageCompanyTooltip": "Gestionar Empresa",
+  
+  "drawerHome": "Inicio",
+  "drawerAdmin": "Admin / Gerencia",
+  "drawerLogout": "Cerrar Sesión",
+  "drawerLanguage": "Idioma / Language",
+  "loginLabel": "Usuario o Email",
+  "usernameLabel": "Usuario",
+  "editProfile": "Editar Perfil",
+  "profileUpdated": "Perfil actualizado",
+  "usernameFieldLabel": "Nombre de Usuario",
+  "clients": "Clientes",
+  
+  "userNotFound": "Usuario no encontrado",
+  "userFetchError": "No se pudo obtener el usuario.",
+  "loginSuccess": "¡Login exitoso!",
+  "loginError": "Credenciales incorrectas o error desconocido.",
+  "registerSuccess": "¡Registro exitoso! Revisa tu email para confirmar.",
+  "registerError": "No se pudo registrar. Verifica los datos o tu email.",
+  "recoveryEmailInvalid": "Ingresa un email válido para recuperar la contraseña.",
+  "recoveryEmailSent": "¡Email de recuperación enviado!",
+  "badCredentials": "Email o contraseña incorrectos.",
+  "claimsManagementTitle": "Gestión de Reclamos",
+  "searchClaimsPlaceholder": "Buscar (ID, Titulo, Desc...)",
+  "allStatuses": "Todos los Estados",
+  "allBranches": "Todas las Sucursales",
+  "itemsPerPage": "Items por pág:",
+  "crmConfig": "Configuración CRM",
+  "noClientAssigned": "Sin Cliente",
+  "loading": "Cargando...",
+  "noClaimsFound": "No se encontraron reclamos",
+  "importClients": "Importar Clientes",
+  "pickFileCSV": "Seleccionar Archivo (CSV)",
+  "preview": "Vista Previa",
+  "importBtn": "Importar",
+  "importSuccess": "Importación exitosa: {count} clientes",
+  "importError": "Error al importar: {error}",
+  "rowsFound": "{count} filas encontradas",
+  
+  "noClientsToExport": "No hay clientes para exportar.",
+  "exportSuccess": "Exportado exitosamente a: {path}",
+  "@exportSuccess": {
+    "placeholders": {
+      "path": {"type": "String"}
+    }
+  },
+  "exportError": "Error al exportar: {error}",
+  "@exportError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "companyCreatedSuccess": "Empresa creada exitosamente",
+  "companyCodeExists": "El código de empresa ya existe.",
+  "companyCreationError": "Error al crear empresa: {error}",
+  "@companyCreationError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "invitationDeleteSuccess": "Invitación eliminada exitosamente",
+  "invitationDeleteError": "Error al eliminar invitación: {error}",
+  "@invitationDeleteError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "clientUpdateError": "Error actualizando datos: {error}",
+  "@clientUpdateError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "clientDeleteError": "Error al eliminar: {error}",
+  "@clientDeleteError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "claimDeleteSuccess": "Reclamo eliminado",
+  "configurationError": "Error en configuración: {error}",
+  "@configurationError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "clientImportError": "Error al importar: {error}",
+  "@clientImportError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "brandingCustomization": "Personalización de Marca",
+  "brandingLoading": "Cargando...",
+  "brandingError": "Error: {error}",
+  "@brandingError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "brandingNotFound": "No se encontró configuración de branding",
+  "brandingTabLogos": "Logos",
+  "brandingTabColorsBase": "Colores Base",
+  "brandingTabColorsAdditional": "Colores Adicionales",
+  "brandingTabTypography": "Tipografía",
+  "brandingTabAdvanced": "Avanzado",
+  
+  "brandingLogosTitle": "Logos de Empresa",
+  "brandingLogosSubtitle": "Sube los logos de tu empresa para personalizar la app",
+  "brandingLogoPrimary": "Logo Principal",
+  "brandingLogoPrimarySubtitle": "Se muestra en el tema claro",
+  "brandingLogoLight": "Logo Claro",
+  "brandingLogoLightSubtitle": "Se muestra en el modo oscuro",
+  
+  "brandingColorsBaseTitle": "Colores Base",
+  "brandingColorsBaseSubtitle": "Define los colores principales de tu marca",
+  "brandingColorPrimary": "Color Primario",
+  "brandingColorSecondary": "Color Secundario",
+  "brandingColorAccent": "Color de Acento",
+  "brandingDarkMode": "Dark Mode",
+  "brandingColorPrimaryDark": "Primario (Dark)",
+  "brandingColorSecondaryDark": "Secundario (Dark)",
+  
+  "brandingColorsAdditionalTitle": "Colores Adicionales",
+  "brandingColorsAdditionalSubtitle": "Personaliza colores de fondo, texto y estados",
+  "brandingColorsGeneral": "Colores Generales",
+  "brandingColorsStates": "Colores de Estado",
+  "brandingColorBackground": "Fondo",
+  "brandingColorText": "Texto",
+  "brandingColorError": "Error",
+  "brandingColorSuccess": "Éxito",
+  "brandingColorWarning": "Advertencia",
+  "brandingColorInfo": "Información",
+  "brandingColorBackgroundDark": "Fondo (Dark)",
+  "brandingColorTextDark": "Texto (Dark)",
+  "brandingColorErrorDark": "Error (Dark)",
+  "brandingColorSuccessDark": "Éxito (Dark)",
+  "brandingColorWarningDark": "Advertencia (Dark)",
+  "brandingColorInfoDark": "Información (Dark)",
+  
+  "brandingTypographyTitle": "Tipografía",
+  "brandingTypographySubtitle": "Selecciona las fuentes y tamaños de texto",
+  "brandingFonts": "Fuentes",
+  "brandingFontPrimary": "Fuente Primaria",
+  "brandingFontSecondary": "Fuente Secundaria (Headers)",
+  "brandingSizes": "Tamaños",
+  "brandingTextSizeBase": "Tamaño de Texto Base: {size}px",
+  "@brandingTextSizeBase": {
+    "placeholders": {
+      "size": {"type": "int"}
+    }
+  },
+  "brandingTextSizeHeader": "Tamaño de Headers: {size}px",
+  "@brandingTextSizeHeader": {
+    "placeholders": {
+      "size": {"type": "int"}
+    }
+  },
+  "brandingTextSizeExample": "Texto de ejemplo con tamaño {size}px",
+  "@brandingTextSizeExample": {
+    "placeholders": {
+      "size": {"type": "int"}
+    }
+  },
+  "brandingHeaderExample": "Título Ejemplo",
+  
+  "brandingAdvancedTitle": "Opciones Avanzadas",
+  "brandingAdvancedSubtitle": "Presets predefinidos y opciones avanzadas",
+  "brandingPresets": "Presets de Tema",
+  "brandingPresetsSubtitle": "Aplica un preset predefinido para configurar rápidamente los colores",
+  "brandingPresetNone": "Ninguno",
+  "brandingPresetSelect": "Seleccionar Preset",
+  "brandingResetDefaults": "Restaurar a Defaults",
+  "brandingInfo": "Información",
+  "brandingLastUpdated": "Última actualización: {date}",
+  "@brandingLastUpdated": {
+    "placeholders": {
+      "date": {"type": "String"}
+    }
+  },
+  "brandingCreated": "Creado: {date}",
+  "@brandingCreated": {
+    "placeholders": {
+      "date": {"type": "String"}
+    }
+  },
+  
+  "brandingPresetApplied": "Preset \"{name}\" aplicado",
+  "@brandingPresetApplied": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "brandingResetDialogTitle": "Restaurar Defaults",
+  "brandingResetDialogMessage": "¿Estás seguro de que quieres restaurar todos los valores a los defaults?",
+  "brandingResetDialogConfirm": "Restaurar",
+  
+  "brandingSelectColor": "Seleccionar Color",
+  "brandingSelectColorButton": "Seleccionar",
+  
+  "brandingSaveChanges": "Guardar Cambios",
+  "brandingSaveSuccess": "Branding actualizado exitosamente",
+  "brandingSaveError": "Error al guardar: {error}",
+  "@brandingSaveError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "logoDeleteSuccess": "Logo eliminado correctamente"
+}

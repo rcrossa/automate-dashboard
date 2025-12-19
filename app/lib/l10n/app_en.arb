@@ -1,0 +1,456 @@
+{
+  "appTitle": "My First App",
+  "loginTitle": "Login",
+  "emailLabel": "Email",
+  "passwordLabel": "Password",
+  "loginButton": "Sign In",
+  "registerButton": "Register",
+  "registerTitle": "Register",
+  "nameLabel": "Name",
+  "welcomeMessage": "Welcome",
+  "forgotPassword": "Forgot password?",
+  "errorMessage": "Error: {error}",
+
+  "logout": "Logout",
+  "close": "Close",
+  "cancel": "Cancel",
+
+  "roleDetected": "Role detected: {role}",
+  "none": "None",
+  "debugMode": "Debug Mode",
+  "debugAdminMessage": "To see the Admin Dashboard, your user must have the \"admin\" role in the database.\n\nDo you want to simulate being Admin now?",
+  "simulateNotImplemented": "Simulate (Not implemented)",
+  "assignRoleMessage": "Please assign the \"admin\" role in Supabase or use an admin user.",
+  "whySeeThis": "Why am I seeing this?",
+  "emailLabelWithVal": "Email: {email}",
+  "permissions": "Permissions:",
+  "companyLabelWithVal": "Company: {company}",
+  "branchLabelWithVal": "Branch: {branch}",
+  "noCompanyAssigned": "No company assigned.",
+
+  "dashboardInactive": "Dashboard Inactive",
+  "dashboardDisabledMessage": "The Dashboard module is disabled.",
+  "adminActivateMessage": "As an administrator, you can activate it in the Marketplace.",
+  "goToMarketplace": "Go to Marketplace",
+  "accessDenied": "Access Denied",
+  "dashboardNotActive": "Dashboard not active",
+  "contactAdminMessage": "Contact your administrator to activate this module.",
+
+  "userNotFoundDB": "User not found in database.",
+  "authenticatedUserId": "Authenticated User ID",
+  "viewUserId": "View User ID",
+
+  "companyPanel": "Company Panel",
+  "modulesMarketplace": "Modules Marketplace",
+  "summary": "Summary",
+  "branches": "Branches",
+  "personnel": "Personnel",
+
+  "searchBranch": "Search Branch",
+  "noBranchesFound": "No branches found",
+  "noAddress": "No address",
+  "editBranch": "Edit Branch",
+  "newBranch": "New Branch",
+  "branchUpdated": "Branch updated",
+  "branchCreated": "Branch created",
+  "addressLabel": "Address",
+  "save": "Save",
+  "create": "Create",
+
+  "searchPersonnel": "Search Personnel",
+  "noEmployeesFound": "No employees found",
+  "noName": "No name",
+  "roleBranchLabel": "Role: {role} - Branch: {branch}",
+  "matrix": "HQ",
+  "editPersonnel": "Edit Personnel",
+  "invitePersonnel": "Invite Personnel",
+  "lastNameLabel": "Last Name",
+  "docIdLabel": "Document ID",
+  "phoneLabel": "Phone",
+  "roleLabel": "Role",
+  "adminRole": "Administrator",
+  "managerRole": "Manager",
+  "userRole": "User / Staff",
+  "branchOptionalLabel": "Branch (Optional)",
+  "noBranchMatrixLabel": "No Branch (HQ)",
+  "invite": "Invite",
+  "userUpdated": "User updated",
+  "invitationSent": "Invitation sent",
+
+  "generalSummary": "General Summary",
+  "incomeMonth": "Income (Month)",
+  "claims": "Claims",
+  "incomeByBranch": "Income by Branch",
+  "branchPanel": "Branch Panel",
+  "branchLabel": "Branch: {name}",
+  "branchManagementPanel": "Branch Management Panel",
+  "viewClaims": "View Claims",
+  "viewInteractions": "View Interactions",
+
+  "staffPortalTitle": "{name} - Staff Portal",
+  "welcomeStaffPortal": "Welcome to Staff Portal",
+  "staffPortalSubtitle": "Manage your tasks and clock-ins from here.",
+  "clockIn": "Clock In",
+  "myTasks": "My Tasks",
+  "requests": "Requests",
+  "myProfile": "My Profile",
+  "backofficeTitle": "Backoffice",
+  "recentActivity": "Recent Activity",
+  "searchUserPlaceholder": "Name or email",
+  "userCount": "{count} users",
+  "paginationInfo": "Page {current} of {total}",
+  "noResults": "No results",
+
+  "clientFileTitle": "Client File",
+  "interactionHistory": "Interaction History",
+  "reload": "Reload",
+  "noInteractions": "No interactions registered",
+  "addNote": "Add Note",
+  "notePlaceholder": "Write a note about the client...",
+  "close": "Close",
+  "errorLoadingInteractions": "Error loading interactions: {error}",
+  "errorSavingNote": "Error saving note: {error}",
+
+  "claimsTitle": "Claims: {name}",
+  "noClaims": "No claims registered",
+  "newClaim": "New Claim",
+  "titleLabel": "Title",
+  "descriptionLabel": "Description",
+  "priorityLabel": "Priority",
+  "priorityLow": "Low",
+  "priorityMedium": "Medium",
+  "priorityHigh": "High",
+  "errorLoadingClaims": "Error loading claims: {error}",
+  "errorCreatingClaim": "Error creating claim: {error}",
+  "errorUpdatingClient": "Error updating client",
+  "branchManagementTitle": "Branch Management",
+  "personnelManagementTitle": "Personnel Management",
+  "errorNoCompanyContext": "Error: No company found in context",
+  "noBranchesRegistered": "No branches registered",
+  "noEmployeesRegistered": "No employeesRegistered",
+  "clientFormTitleNew": "New Client",
+  "clientFormTitleEdit": "Edit Client",
+  "labelBranch": "Branch",
+  "labelHeadquarters": "Headquarters / Global",
+  "typePerson": "Person",
+  "typeCompany": "Company",
+  "labelBusinessName": "Business Name *",
+  "labelTaxId": "Tax ID *",
+  "labelContactName": "Contact Name *",
+  "labelContactLastName": "Contact Last Name",
+  "labelName": "Name *",
+  "labelLastName": "Last Name",
+  "labelIdDocument": "ID Document",
+  "labelEmail": "Email",
+  "labelPhone": "Phone",
+  "labelAddress": "Address",
+  "labelNotes": "Notes",
+  "btnCancel": "Cancel",
+  "btnSave": "Save",
+  "validationRequired": "Required",
+  "marketplaceTitle": "Module Marketplace",
+  "errorUpdatingStatus": "Error updating status: {error}",
+
+  "viewFile": "View File",
+  "permissionsLabel": "Permissions:",
+  
+  "statusPending": "Pending",
+  "statusInProgress": "In Progress",
+  "statusResolved": "Resolved",
+  "statusClosed": "Closed",
+  "priorityDisplay": "Priority: {priority}",
+
+  "serverError": "Server error. Please try again later.",
+  "authError": "Authentication error.",
+  "networkError": "Connection error. Check your internet.",
+  "validationError": "Validation error. Check your data.",
+  "unknownError": "An unexpected error occurred.",
+
+  "superAdminDashboardTitle": "Super Admin Dashboard",
+  "companiesSection": "Companies",
+  "pendingInvitationsSection": "Pending Invitations",
+  "noPendingInvitations": "No pending invitations",
+  "errorLoadingCompanies": "Error loading companies: {error}",
+  "codeLabel": "Code",
+  "createdLabel": "Created",
+  "manageModulesTooltip": "Manage Modules",
+  "manageCompanyTooltip": "Manage Company",
+
+  "drawerHome": "Home",
+  "drawerAdmin": "Admin / Management",
+  "drawerLogout": "Logout",
+  "drawerLanguage": "Language / Idioma",
+  "loginLabel": "Username or Email",
+  "usernameLabel": "Username",
+  "editProfile": "Edit Profile",
+  "profileUpdated": "Profile updated",
+  "usernameFieldLabel": "Username",
+  "clients": "Clients",
+  
+  "userNotFound": "User not found",
+  "userFetchError": "Could not fetch user.",
+  "loginSuccess": "Login successful!",
+  "loginError": "Incorrect credentials or unknown error.",
+  "registerSuccess": "Registration successful! Check your email to confirm.",
+  "registerError": "Could not register. Check data or email.",
+  "recoveryEmailInvalid": "Enter a valid email to recover password.",
+  "recoveryEmailSent": "Recovery email sent!",
+  "badCredentials": "Incorrect email or password.",
+  "importClients": "Import Clients",
+  "pickFileCSV": "Pick File (CSV)",
+  "preview": "Preview",
+  "importBtn": "Import",
+  "importSuccess": "Import successful: {count} clients",
+  "importError": "Error importing: {error}",
+  "rowsFound": "{count} rows found",
+  
+  "searchClaimsPlaceholder": "Search (ID, Title, Desc...)",
+  "allStatuses": "All Statuses",
+  "allBranches": "All Branches",
+  "itemsPerPage": "Items per page:",
+  "crmConfig": "CRM Configuration",
+  "noClientAssigned": "No Client",
+  "loading": "Loading...",
+  "noClaimsFound": "No claims found",
+  "claimsManagementTitle": "Claims Management",
+  
+  "noClientsToExport": "No clients to export.",
+  "exportSuccess": "Successfully exported to: {path}",
+  "@exportSuccess": {
+    "placeholders": {
+      "path": {"type": "String"}
+    }
+  },
+  "exportError": "Export error: {error}",
+  "@exportError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "companyCreatedSuccess": "Company created successfully",
+  "companyCodeExists": "Company code already exists.",
+  "companyCreationError": "Error creating company: {error}",
+  "@companyCreationError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "invitationDeleteSuccess": "Invitation deleted successfully",
+  "invitationDeleteError": "Error deleting invitation: {error}",
+  "@invitationDeleteError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "clientUpdateError": "Error updating data: {error}",
+  "@clientUpdateError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "clientDeleteError": "Error deleting: {error}",
+  "@clientDeleteError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "claimDeleteSuccess": "Claim deleted",
+  "configurationError": "Configuration error: {error}",
+  "@configurationError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "clientImportError": "Import error: {error}",
+  "@clientImportError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "brandingCustomization": "Brand Customization",
+  "brandingLoading": "Loading...",
+  "brandingError": "Error: {error}",
+  "@brandingError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "brandingNotFound": "Branding configuration not found",
+  "brandingTabLogos": "Logos",
+  "brandingTabColorsBase": "Base Colors",
+  "brandingTabColorsAdditional": "Additional Colors",
+  "brandingTabTypography": "Typography",
+  "brandingTabAdvanced": "Advanced",
+  
+  "brandingLogosTitle": "Company Logos",
+  "brandingLogosSubtitle": "Upload your company logos to customize the app",
+  "brandingLogoPrimary": "Primary Logo",
+  "brandingLogoPrimarySubtitle": "Shown in light theme",
+  "brandingLogoLight": "Light Logo",
+  "brandingLogoLightSubtitle": "Shown in dark mode",
+  
+  "brandingColorsBaseTitle": "Base Colors",
+  "brandingColorsBaseSubtitle": "Define your brand's main colors",
+  "brandingColorPrimary": "Primary Color",
+  "brandingColorSecondary": "Secondary Color",
+  "brandingColorAccent": "Accent Color",
+  "brandingDarkMode": "Dark Mode",
+  "brandingColorPrimaryDark": "Primary (Dark)",
+  "brandingColorSecondaryDark": "Secondary (Dark)",
+  
+  "brandingColorsAdditionalTitle": "Additional Colors",
+  "brandingColorsAdditionalSubtitle": "Customize background, text and state colors",
+  "brandingColorsGeneral": "General Colors",
+  "brandingColorsStates": "State Colors",
+  "brandingColorBackground": "Background",
+  "brandingColorText": "Text",
+  "brandingColorError": "Error",
+  "brandingColorSuccess": "Success",
+  "brandingColorWarning": "Warning",
+  "brandingColorInfo": "Information",
+  "brandingColorBackgroundDark": "Background (Dark)",
+  "brandingColorTextDark": "Text (Dark)",
+  "brandingColorErrorDark": "Error (Dark)",
+  "brandingColorSuccessDark": "Success (Dark)",
+  "brandingColorWarningDark": "Warning (Dark)",
+  "brandingColorInfoDark": "Information (Dark)",
+  
+  "brandingTypographyTitle": "Typography",
+  "brandingTypographySubtitle": "Select fonts and text sizes",
+  "brandingFonts": "Fonts",
+  "brandingFontPrimary": "Primary Font",
+  "brandingFontSecondary": "Secondary Font (Headers)",
+  "brandingSizes": "Sizes",
+  "brandingTextSizeBase": "Base Text Size: {size}px",
+  "@brandingTextSizeBase": {
+    "placeholders": {
+      "size": {"type": "int"}
+    }
+  },
+  "brandingTextSizeHeader": "Header Size: {size}px",
+  "@brandingTextSizeHeader": {
+    "placeholders": {
+      "size": {"type": "int"}
+    }
+  },
+  "brandingTextSizeExample": "Example text with {size}px size",
+  "@brandingTextSizeExample": {
+    "placeholders": {
+      "size": {"type": "int"}
+    }
+  },
+  "brandingHeaderExample": "Example Title",
+  
+  "brandingAdvancedTitle": "Advanced Options",
+  "brandingAdvancedSubtitle": "Predefined presets and advanced options",
+  "brandingPresets": "Theme Presets",
+  "brandingPresetsSubtitle": "Apply a predefined preset to quickly configure colors",
+  "brandingPresetNone": "None",
+  "brandingPresetSelect": "Select Preset",
+  "brandingResetDefaults": "Reset to Defaults",
+  "brandingInfo": "Information",
+  "brandingLastUpdated": "Last updated: {date}",
+  "@brandingLastUpdated": {
+    "placeholders": {
+      "date": {"type": "String"}
+    }
+  },
+  "brandingCreated": "Created: {date}",
+  "@brandingCreated": {
+    "placeholders": {
+      "date": {"type": "String"}
+    }
+  },
+  
+  "brandingPresetApplied": "Preset \"{name}\" applied",
+  "@brandingPresetApplied": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "brandingResetDialogTitle": "Reset Defaults",
+  "brandingResetDialogMessage": "Are you sure you want to reset all values to defaults?",
+  "brandingResetDialogConfirm": "Reset",
+  
+  "brandingSelectColor": "Select Color",
+  "brandingSelectColorButton": "Select",
+  
+  "brandingSaveChanges": "Save Changes",
+  "brandingSaveSuccess": "Branding updated successfully",
+  "brandingSaveError": "Error saving: {error}",
+  "@brandingSaveError": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  
+  "logoDeleteSuccess": "Logo deleted successfully",
+
+  "audioTestTitle": "Audio Recording Test",
+  "audioTestSubtitle": "Test recording and transcription functionality",
+  "toolsSection": "Testing Tools",
+  "audioTestCard": "Audio Test",
+  "audioTestDescription": "Test voice recording and speech-to-text transcription",
+  "branchInfoSection": "Information",
+  "currentBranch": "Current Branch",
+  "branchName": "Name",
+  "branchAddress": "Address",
+  "limitedAccessStaff": "Limited access: staff view",
+  
+  "recordingInstructions": "Tap the microphone to start recording",
+  "tapToRecord": "Tap to record",
+  "recording": "RECORDING",
+  "paused": "PAUSED",
+  "maxDuration": "Maximum: {duration}",
+  "@maxDuration": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "recordingControls": "Controls",
+  "cancelRecording": "Cancel",
+  "pauseRecording": "Pause",
+  "resumeRecording": "Resume",
+  "stopRecording": "Finish",
+  "permissionRequired": "Permission Required",
+  "microphonePermissionMessage": "Microphone access is needed to record audio. Please enable the permission in app settings.",
+  "errorStartingRecording": "Error starting recording: {error}",
+  "@errorStartingRecording": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "recordedAudio": "Recorded Audio",
+  "fileName": "File",
+  "fileSize": "Size",
+  "noRecordingsYet": "No recordings yet",
+  "transcribeAudio": "Transcribe Audio",
+  "transcribing": "Transcribing...",
+  "transcription": "Transcription",
+  "copyToClipboard": "Copy",
+  "copiedToClipboard": "Copied to clipboard",
+  "transcriptionCompleted": "Transcription completed ✅",
+  "textCopied": "Text copied to clipboard",
+  "recordingTest": "Recording Test",
+  "transcriptionError": "Transcription error",
+  "backendConnectionError": "Cannot connect to server. Verify that the backend is running.",
+  "transcriptionFailed": "Transcription failed: {error}",
+  "@transcriptionFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
+}

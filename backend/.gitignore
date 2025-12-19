@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+venv/
+.env
+.env.local
+.pytest_cache/
+.coverage
+*.log
+.DS_Store
+~/.cache/whisper/
+temp_audio/
+*.m4a
+*.mp3
+*.wav

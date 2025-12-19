@@ -1,0 +1,39 @@
+# FastAPI Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# Whisper for Speech-to-Text
+openai-whisper==20231117
+
+# PyTorch (compatible with Apple Silicon)
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# Audio processing
+soundfile>=0.12.1
+
+# NumPy constraint for compatibility
+numpy<2.0
+
+# Pyannote for Speaker Diarization
+pyannote.audio==3.1.1
+
+# Supabase Integration
+supabase==2.3.4
+
+# Environment & Configuration
+python-dotenv==1.0.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# HTTP & Async
+httpx>=0.23.0  # Let pyannote resolve version
+aiofiles==23.2.1
+
+# Utilities
+python-dateutil==2.8.2
+
+# Testing
+pytest==7.4.4
+pytest-asyncio==0.23.3
